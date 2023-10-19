@@ -6,7 +6,6 @@ import cProfile
 
 
 def find_files_for_serials(directory: str, serial_numbers: dict, files_for_serials: dict, sort_order: bool) -> None:
-    start_time = time.time()
     """
     Function to find files for serials
     :param str directory: File Directory on PC you would like to scan
@@ -34,12 +33,12 @@ def find_files_for_serials(directory: str, serial_numbers: dict, files_for_seria
 
 
 def fileParser(files_for_serials: dict) -> dict:
-    start_time = time.time()
     """
     Function to extract data from files
     :param dict files_for_serials: A dictionary containing the files with matching serial numbers
     :return dict results: A dictionary with extracted data from the files
     """
+    start_time = time.time()
     max_gain_pattern = r"Max Gain: (\d+)"
     mechanical_travel_pattern = r"Mechanical Travel: \d+(\.\d+)? <= (\d+(\.\d+)?) <= \d+(\.\d+)?"
     dynamic_tip_tilt_pattern = r"Dynamic Tip/Tilt [a-zA-Z]+: ([\d.]+)deg"
