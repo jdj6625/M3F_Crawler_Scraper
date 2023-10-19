@@ -36,7 +36,7 @@ def fileParser(files_for_serials: dict) -> dict:
     """
     Function to extract data from files
     :param dict files_for_serials: A dictionary containing the files with matching serial numbers
-    :return dict results: A dictionary with extracted data from the files
+    :return: dict results: A dictionary with extracted data from the files
     """
     start_time = time.time()
     max_gain_pattern = r"Max Gain: (\d+)"
